@@ -14,13 +14,15 @@ import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
 import com.alpha.Hospital.Service.PatientService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class DoctorController {
 	@Autowired
 	private PatientService ps;
 	
 	@PostMapping("/savepatient")
-	public void savePatient(@RequestBody Patient s) {
+	public void savePatient(@Valid @RequestBody Patient s) {
 		ps.savePatient(s);
 		
 	}
