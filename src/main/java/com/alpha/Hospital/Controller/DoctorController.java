@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alpha.Hospital.ResponceStructure;
+import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
 import com.alpha.Hospital.Service.PatientService;
 
@@ -38,6 +39,13 @@ public class DoctorController {
 	@PutMapping("/update")
 	public void updatePatient(@RequestParam int id,@RequestParam String newname) {
 		ps.updatePatient(id,newname);
+	}
+	
+	
+	@PostMapping("/doctor")
+	public void saveDoctor(@RequestBody Doctor c)
+	{
+		ps.saveDoctorPatient(c);
 	}
 	
 	

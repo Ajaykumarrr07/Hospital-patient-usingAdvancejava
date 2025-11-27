@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.alpha.Hospital.ResponceStructure;
+import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
 import com.alpha.Hospital.Exception.PatientNotFoundException;
 import com.alpha.Hospital.Repository.DoctorRepo;
@@ -48,6 +49,13 @@ public class PatientService {
 		Patient p=pr.findById(id).get();
 		p.setSname(newname);
 		pr.save(p);
+		
+	}
+
+	public void saveDoctorPatient(Doctor c) {
+		// TODO Auto-generated method stub
+		
+		dr.save(c);
 		
 	}
 	
