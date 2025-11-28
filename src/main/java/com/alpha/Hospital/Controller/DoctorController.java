@@ -52,7 +52,7 @@ public class DoctorController {
 	}
 	
 	@PostMapping("/savepatientdto")
-	public void savePatient(@RequestBody PatientDTO pdto) {
+	public void savePatient(@Valid @RequestBody PatientDTO pdto) {
 		ps.savePatient(pdto);
 		
 	}

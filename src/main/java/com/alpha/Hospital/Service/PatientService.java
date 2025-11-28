@@ -8,6 +8,7 @@ import com.alpha.Hospital.ResponceStructure;
 import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
 import com.alpha.Hospital.Exception.PatientNotFoundException;
+import com.alpha.Hospital.PatientDTO.PatientDTO;
 import com.alpha.Hospital.Repository.DoctorRepo;
 import com.alpha.Hospital.Repository.PatientRepo;
 @Service
@@ -58,6 +59,17 @@ public class PatientService {
 		dr.save(c);
 		
 	}
+
+	public void savePatient(PatientDTO pdto) {
+		// TODO Auto-generated method stub
+		Patient p=new Patient();
+		p.setSname(pdto.getSname());
+		p.setAge(pdto.getAge());
+		p.setDieasesase(pdto.getDieasesase());
+		pr.save(p);
+	}
+
+	
 	
 
 

@@ -1,8 +1,15 @@
 package com.alpha.Hospital.PatientDTO;
 
+import org.hibernate.validator.constraints.Length;
+
+import jakarta.validation.constraints.Positive;
+
 public class PatientDTO {
+	@Length(min=5, max=10)
 	private String sname;
+	@Positive
 	private int age;
+	@Length(min=5, max=10)
 	private String dieasesase;
 	public String getSname() {
 		return sname;
