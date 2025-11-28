@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.alpha.Hospital.ResponceStructure;
 import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
+import com.alpha.Hospital.Entity.PatientDTO;
 import com.alpha.Hospital.Exception.PatientNotFoundException;
 import com.alpha.Hospital.Repository.DoctorRepo;
 import com.alpha.Hospital.Repository.PatientRepo;
@@ -58,6 +59,8 @@ public class PatientService {
 		dr.save(c);
 		
 	}
+
+	
 	
 
 
