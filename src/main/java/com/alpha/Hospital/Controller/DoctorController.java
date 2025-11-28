@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alpha.Hospital.ResponceStructure;
 import com.alpha.Hospital.Entity.Doctor;
 import com.alpha.Hospital.Entity.Patient;
-
+import com.alpha.Hospital.PatientDTO.PatientDTO;
 import com.alpha.Hospital.Service.PatientService;
 
 import jakarta.validation.Valid;
@@ -51,6 +51,10 @@ public class DoctorController {
 		ps.saveDoctorPatient(c);
 	}
 	
-
+	@PostMapping("/savepatientdto")
+	public void savePatient(@RequestBody PatientDTO pdto) {
+		ps.savePatient(pdto);
+		
+	}
 
 }
